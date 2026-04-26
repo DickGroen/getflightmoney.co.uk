@@ -1,1 +1,7 @@
 
+name = "flightclaim"
+main = "worker/index.js"
+compatibility_date = "2024-12-01"
+
+[triggers]
+crons = ["0 13 * * 1-5"]
