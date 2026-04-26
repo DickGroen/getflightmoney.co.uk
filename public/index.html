@@ -1,38 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flight delayed or cancelled? Check if you&rsquo;re owed money | FlightClaim</title>
-  <meta name="description" content="You could be owed up to £520. Upload your document and get a ready-to-send claim letter within 24 hours. One-time £29 — keep 100% of your compensation.">
+  <title>Parking fine? You may not have to pay it | ParkingFine.co.uk</title>
+  <meta name="description" content="Got a parking fine? Most private fines can be successfully appealed. Upload your fine and get a ready-to-send appeal letter within 24 hours. One-time £19.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .optie-grid--drie { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin: 32px 0; }
-    @media (max-width: 860px) { .optie-grid--drie { grid-template-columns: 1fr; } }
-    .optie-card--premium { background: var(--ink); border: 2px solid var(--ink); border-radius: 16px; padding: 28px 24px; position: relative; }
-    .optie-badge--premium { background: rgba(255,255,255,0.15); color: var(--white); }
-    .optie-btn--premium { background: var(--white); color: var(--ink); }
-    .optie-btn--premium:hover { background: var(--surface); text-decoration: none; }
-    .tier-highlight { font-size: 0.76rem; color: rgba(255,255,255,0.65); text-align: center; margin-top: 10px; }
-    .saving-box { background: var(--green-soft); border: 1.5px solid #bbf7d0; border-radius: 10px; padding: 16px 18px; margin: 20px 0; text-align: center; }
-    .saving-box__amount { font-size: 1.6rem; font-weight: 700; color: var(--green); font-family: 'DM Serif Display', Georgia, serif; }
-    .saving-box__label { font-size: 0.82rem; color: var(--muted); margin-top: 2px; }
-    .forwhom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 8px; }
-    @media (max-width: 680px) { .forwhom-grid { grid-template-columns: 1fr; } }
-    .forwhom-card { border-radius: 14px; padding: 24px; }
-    .forwhom-card--yes { background: var(--green-soft); border: 1.5px solid #bbf7d0; }
-    .forwhom-card--no { background: var(--surface); border: 1.5px solid var(--line); }
-    .forwhom-title { font-weight: 700; font-size: 1rem; margin-bottom: 14px; }
-    .forwhom-title--yes { color: var(--green); }
-    .forwhom-title--no { color: var(--muted); }
-    .forwhom-list { list-style: none; display: grid; gap: 8px; }
-    .forwhom-list li { font-size: 0.88rem; color: var(--ink-3); display: flex; gap: 8px; line-height: 1.5; }
-    .forwhom-icon--yes { color: var(--green); font-weight: 700; flex-shrink: 0; }
-    .forwhom-icon--no { color: var(--muted); flex-shrink: 0; }
+    .private-banner { background: var(--green-soft); border: 1.5px solid #bbf7d0; border-radius: 12px; padding: 16px 20px; margin: 20px 0; display: flex; align-items: flex-start; gap: 12px; }
+    .private-banner__icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+    .private-banner__title { font-weight: 700; color: var(--green); font-size: 0.95rem; margin-bottom: 4px; }
+    .private-banner__text { font-size: 0.86rem; color: var(--ink-3); line-height: 1.6; }
+    .type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 8px; }
+    @media (max-width: 680px) { .type-grid { grid-template-columns: 1fr; } }
+    .type-card { border-radius: 14px; padding: 24px; }
+    .type-card--private { background: var(--green-soft); border: 1.5px solid #bbf7d0; }
+    .type-card--council { background: var(--surface); border: 1.5px solid var(--line); }
+    .type-title { font-weight: 700; font-size: 1rem; margin-bottom: 10px; }
+    .type-title--private { color: var(--green); }
+    .type-title--council { color: var(--accent); }
+    .type-list { list-style: none; display: grid; gap: 7px; }
+    .type-list li { font-size: 0.86rem; color: var(--ink-3); display: flex; gap: 8px; line-height: 1.5; }
     .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
     @media (max-width: 680px) { .trust-grid { grid-template-columns: 1fr; } }
     .trust-item { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 20px 16px; }
@@ -42,102 +33,92 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
   <div class="container--wide">
     <div class="site-header__inner">
-      <div class="logo"><span class="logo-dot"></span>FlightClaim</div>
-      <button class="header-cta" onclick="openModal()">Check my flight &mdash; &pound;29</button>
+      <div class="logo"><span class="logo-dot"></span>ParkingFine.co.uk</div>
+      <button class="header-cta" onclick="openModal()">Check my fine before I pay &mdash; &pound;19</button>
     </div>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="container">
 
     <div class="hero__eyebrow" style="justify-content:center;text-align:center;display:block;margin-left:auto;margin-right:auto;">
-      Airlines rarely pay unless you claim &mdash; here&rsquo;s how to get your money
+      Most people pay without checking &mdash; and lose &pound;60&ndash;&pound;160 unnecessarily
     </div>
 
-    <h1 style="text-align:center;">You could be owed up to &pound;520<br>for your flight &mdash; check now.</h1>
+    <h1 style="text-align:center;">Got a parking fine of &pound;60&ndash;&pound;160?<br>You may not have to pay it.</h1>
 
     <p class="hero__sub" style="text-align:center;margin-left:auto;margin-right:auto;">
-      Flight delayed or cancelled? You may have a legal right to compensation.<br><br>
-      Upload your document and get a full check + ready-to-send claim letter within 24 hours.<br><br>
-      <strong>Keep 100% of your compensation &mdash; no success fee.</strong><br>
-      <span style="font-size:0.9rem;color:var(--muted);">Most claims take 2&ndash;4 weeks to be paid after sending your letter.</span>
+      You might be about to pay a fine you don&rsquo;t actually owe.<br><br>
+      Upload your fine and get a full check + ready-to-send appeal letter within 24 hours.<br><br>
+      <strong>One-time &pound;19 &mdash; no subscription.</strong>
     </p>
 
-    <div class="value-strip">
-      <span class="value-item"><span class="vi-check">&#10004;</span> Average &pound;280&ndash;&pound;350 per successful claim</span>
-      <span class="value-item"><span class="vi-check">&#10004;</span> Ready-to-send claim letter within 24 hours</span>
-      <span class="value-item"><span class="vi-check">&#10004;</span> No success fee &mdash; one-time &pound;29</span>
-      <span class="value-item"><span class="vi-check">&#10004;</span> Your document is deleted after processing</span>
+    <div class="private-banner">
+      <div class="private-banner__icon">&#128994;</div>
+      <div>
+        <div class="private-banner__title">Private fine? Often easier to beat than you think.</div>
+        <div class="private-banner__text">Fines from NCP, Euro Car Parks, ParkingEye and similar companies are NOT council PCNs. They cannot send bailiffs without a court order. Many are successfully appealed on procedural or signage grounds &mdash; often without even going to POPLA.</div>
+      </div>
     </div>
 
-    <!-- THREE OPTIONS -->
-    <div class="optie-grid--drie">
+    <div class="value-strip">
+      <span class="value-item"><span class="vi-check">&#10004;</span> Most people pay without checking &mdash; and lose &pound;60&ndash;&pound;160 unnecessarily</span>
+      <span class="value-item"><span class="vi-check">&#10004;</span> Full check + appeal letter within 24 hours</span>
+      <span class="value-item"><span class="vi-check">&#10004;</span> Works for private fines AND council PCNs</span>
+      <span class="value-item"><span class="vi-check">&#10004;</span> One-time &pound;19 &middot; no subscription</span>
+    </div>
 
-      <!-- £29 — PRIMARY -->
+    <!-- TWO OPTIONS -->
+    <div class="optie-grid">
+
+      <!-- £19 PRIMARY -->
       <div class="optie-card optie-card--betaald">
         <div class="optie-badge optie-badge--betaald">Most popular</div>
-        <h3 class="optie-title">Full Check + Claim Letter</h3>
-        <p class="optie-desc">We check your flight and write a ready-to-send claim letter. You send it &mdash; and keep 100% of your compensation.</p>
+        <h3 class="optie-title">Full Check + Appeal Letter</h3>
+        <p class="optie-desc">We check your fine for every possible appeal ground and write a ready-to-send appeal letter. You send it and keep your money.</p>
         <ul class="optie-list">
-          <li>&#10003; Full compensation check based on UK/EU flight law</li>
-          <li>&#10003; Check for &ldquo;extraordinary circumstances&rdquo; defence</li>
-          <li>&#10003; Ready-to-send claim letter in your name</li>
-          <li>&#10003; Clear next steps if airline rejects</li>
-          <li>&#10003; Delivered within 24 hours</li>
+          <li>&#10003; Private vs council: we check which type and adjust strategy</li>
+          <li>&#10003; NtK timing check (private: must arrive within 14 days)</li>
+          <li>&#10003; Signage and procedural errors</li>
+          <li>&#10003; Keeper liability under POFA 2012</li>
+          <li>&#10003; Ready-to-send appeal letter</li>
+          <li>&#10003; Next steps if rejected (POPLA / adjudicator)</li>
+          <li>&#10003; Within 24 hours</li>
         </ul>
         <div style="background:var(--accent-soft);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:0.82rem;color:var(--accent);margin-bottom:16px;line-height:1.55;">
-          Claim companies take 25&ndash;35%. On &pound;520, that&rsquo;s up to &pound;182 lost. For &pound;29, you keep everything.
+          For &pound;19 you get a proper appeal. That&rsquo;s a fraction of what most fines cost &mdash; and appeals are free to submit.
         </div>
-        <div class="optie-price">&pound;29 <span>one-time &middot; no subscription</span></div>
-        <a href="https://buy.stripe.com/YOUR_STRIPE_LINK_29" class="optie-btn optie-btn--betaald">Check my flight now &rarr;</a>
+        <div class="optie-price">&pound;19 <span>one-time &middot; no subscription</span></div>
+        <a href="https://buy.stripe.com/YOUR_STRIPE_LINK" class="optie-btn optie-btn--betaald">Check my fine before I pay &rarr;</a>
         <p class="optie-security">&#128274; Secure payment via Stripe</p>
-        <p class="optie-guarantee" style="font-size:0.76rem;color:var(--muted);text-align:center;margin-top:6px;">Incomplete check? Full refund.</p>
+        <p class="optie-guarantee" style="font-size:0.76rem;color:var(--muted);text-align:center;margin-top:6px;">Incomplete analysis? Full refund.</p>
       </div>
 
-      <!-- £49 — WE HANDLE IT -->
-      <div class="optie-card optie-card--premium">
-        <div class="optie-badge optie-badge--premium">We handle it</div>
-        <h3 class="optie-title" style="color:var(--white);">We Send It For You</h3>
-        <p class="optie-desc" style="color:rgba(255,255,255,0.75);">We send the claim letter to the airline on your behalf. Nothing for you to do.</p>
-        <ul class="optie-list" style="color:rgba(255,255,255,0.85);">
-          <li>&#10003; Everything from the &pound;29 option</li>
-          <li>&#10003; We send the claim to the airline</li>
-          <li>&#10003; Professional communication</li>
-          <li>&#10003; No work for you</li>
-          <li>&#10003; Delivered within 24 hours</li>
-        </ul>
-        <div class="optie-price" style="color:var(--white);">&pound;49 <span style="color:rgba(255,255,255,0.5);">one-time &middot; no subscription</span></div>
-        <a href="https://buy.stripe.com/YOUR_STRIPE_LINK_49" class="optie-btn optie-btn--premium">Get it done for me &rarr;</a>
-        <p class="tier-highlight">Your compensation goes directly to you &mdash; we never take a cut</p>
-      </div>
-
-      <!-- FREE — TERTIARY -->
+      <!-- FREE — SECONDARY -->
       <div class="optie-card optie-card--gratis" id="free-card" style="opacity:0;transform:scale(0.97);transform-origin:top center;transition:opacity 0.4s ease;pointer-events:none;">
         <div class="optie-badge optie-badge--gratis">Free</div>
-        <h3 class="optie-title" style="font-size:0.98rem;">Not sure yet?</h3>
-        <p class="optie-desc" style="font-size:0.82rem;">Get a free estimate first. No payment needed.</p>
+        <h3 class="optie-title" style="font-size:0.98rem;">Quick check first</h3>
+        <p class="optie-desc" style="font-size:0.82rem;">Upload your fine for a free initial assessment &mdash; private or council, and appeal potential.</p>
         <ul class="optie-list" style="font-size:0.82rem;">
-          <li>&#10003; Airline and disruption identified</li>
-          <li>&#10003; Possible compensation (&pound;220 / &pound;350 / &pound;520)</li>
-          <li>&#10003; Delivered by email within 24 hours</li>
+          <li>&#10003; Private or council identified</li>
+          <li>&#10003; Initial appeal potential: high, medium or low</li>
+          <li>&#10003; By next business day before 4pm</li>
         </ul>
         <div class="optie-price" style="font-size:1.2rem;">Free</div>
         <input type="file" id="gratis-file-input" accept=".pdf,.jpg,.jpeg,.png" onchange="handleGratisFileSelect(this)" style="display:none;">
         <label class="upload-section upload-section--small" id="gratis-upload-zone" for="gratis-file-input">
-          <div class="upload-label">Upload document</div>
+          <div class="upload-label">Upload your fine</div>
           <div class="upload-hint">PDF, JPG or PNG &middot; max 8 MB</div>
         </label>
         <div id="gratis-contact-fields" style="display:none;gap:8px;flex-direction:column;">
           <input type="text" id="gratis-name" placeholder="Your name" class="optie-input">
           <input type="email" id="gratis-email" placeholder="Your email address" class="optie-input">
         </div>
-        <button class="optie-btn optie-btn--gratis" id="gratis-btn" onclick="startGratisUpload()" disabled>Get free estimate</button>
+        <button class="optie-btn optie-btn--gratis" id="gratis-btn" onclick="startGratisUpload()" disabled>Get free check</button>
         <div class="optie-status" id="gratis-status"></div>
       </div>
 
@@ -146,7 +127,7 @@
     <!-- TEASER -->
     <input type="file" id="file-input" accept=".pdf,.jpg,.jpeg,.png" onchange="handleFile(this)" style="display:none;">
     <label class="upload-section" id="upload-zone" for="file-input" style="display:none;">
-      <div class="upload-label">Upload your document</div>
+      <div class="upload-label">Upload your fine</div>
       <div class="upload-hint">PDF, JPG or PNG</div>
     </label>
 
@@ -154,28 +135,28 @@
       <div class="teaser__header">
         <div>
           <div style="font-size:0.72rem;color:#9CA3AF;margin-bottom:4px;letter-spacing:0.05em;text-transform:uppercase;">Found</div>
-          <div class="teaser__company" id="teaser-company">We&rsquo;ve found potential compensation for your flight</div>
+          <div class="teaser__company" id="teaser-company">We&rsquo;ve identified potential appeal scenarios for your fine</div>
         </div>
         <div class="teaser__status-label">Ready</div>
       </div>
       <div class="teaser__body">
         <div class="teaser__found" id="teaser-found">Initial check:</div>
-        <div class="teaser__sub" id="teaser-sub">Your document has been checked. Click below to get your full claim letter.</div>
+        <div class="teaser__sub" id="teaser-sub">Your fine has been identified. Click below for your full appeal letter.</div>
         <div class="teaser__locked">
           <div class="lock-icon">
             <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           </div>
           <div class="teaser__locked-text" id="teaser-locked-text">
-            <strong>Full check + claim letter after payment</strong>
-            We&rsquo;ll confirm your right to compensation and write a ready-to-send claim letter &mdash; within 24 hours.
+            <strong>Full analysis + appeal letter after payment</strong>
+            We&rsquo;ll check all grounds to appeal and write a ready-to-send letter &mdash; within 24 hours.
           </div>
         </div>
       </div>
     </div>
 
     <div class="cta-wrap">
-      <button class="cta-main" onclick="openModal()">Check my flight now &mdash; &pound;29 &middot; Within 24 hours</button>
-      <div class="cta-sub">One-time &pound;29 &middot; no subscription &middot; keep 100% of your compensation &middot; &#128274; Secure via Stripe</div>
+      <button class="cta-main" onclick="openModal()">Check my fine before I pay &mdash; &pound;19 &middot; Within 24 hours</button>
+      <div class="cta-sub">Before you pay &middot; one-time &pound;19 &middot; &#128274; Secure via Stripe</div>
     </div>
 
   </div>
@@ -185,66 +166,55 @@
 <section class="section">
   <div class="container">
     <div class="section-label">How it works</div>
-    <h2>Three steps to your money</h2>
+    <h2>Three steps to your appeal</h2>
     <div class="steps">
       <div class="step">
         <div class="step__num">01</div>
-        <div class="step__title">Upload your document</div>
-        <div class="step__desc">Boarding pass, booking confirmation or airline letter. PDF, JPG or PNG. Takes less than 2 minutes.</div>
+        <div class="step__title">Upload your fine</div>
+        <div class="step__desc">Parking ticket, PCN letter or Notice to Keeper. PDF, JPG or PNG. Takes less than 2 minutes.</div>
       </div>
       <div class="step">
         <div class="step__num">02</div>
-        <div class="step__title">We check your claim</div>
-        <div class="step__desc">We check your right to compensation, the amount you&rsquo;re owed, and whether the airline&rsquo;s &ldquo;extraordinary circumstances&rdquo; defence holds up.</div>
+        <div class="step__title">We check everything</div>
+        <div class="step__desc">We identify whether it&rsquo;s private or council, check NtK timing, signage compliance, procedural errors and keeper liability under POFA 2012.</div>
       </div>
       <div class="step">
         <div class="step__num">03</div>
-        <div class="step__title">Claim letter by email</div>
-        <div class="step__desc">Within 24 hours you receive a ready-to-send claim letter. Send it to the airline and keep 100% of your compensation.</div>
+        <div class="step__title">Appeal letter by email</div>
+        <div class="step__desc">Within 24 hours you receive a full analysis and ready-to-send appeal letter. Send it to the company or council and keep your money.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SAVING SECTION -->
+<!-- PRIVATE VS COUNCIL -->
 <section class="section section--alt">
   <div class="container">
-    <div class="section-label">Why not just use a claim company?</div>
-    <h2>Claim companies take your money. We don&rsquo;t.</h2>
-    <p style="color:var(--ink-3);line-height:1.75;max-width:640px;margin-bottom:28px;">
-      Most claim companies charge 25&ndash;35% of your compensation. On a &pound;520 claim, that&rsquo;s up to &pound;182 gone. FlightClaim charges a flat &pound;29 and you keep everything else.
-    </p>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;max-width:640px;" class="proof-grid">
-      <div class="proof-item"><div class="proof-num">&pound;520</div><div class="proof-label">Max compensation for long-haul flights</div></div>
-      <div class="proof-item"><div class="proof-num">&pound;182</div><div class="proof-label">What a 35% claim company takes on a &pound;520 claim</div></div>
-      <div class="proof-item"><div class="proof-num">&pound;29</div><div class="proof-label">What FlightClaim charges &mdash; you keep the rest</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- FOR WHOM -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">Is this right for me?</div>
-    <h2>Quick check &mdash; does this apply to your flight?</h2>
-    <div class="forwhom-grid">
-      <div class="forwhom-card forwhom-card--yes">
-        <div class="forwhom-title forwhom-title--yes">Likely applies if...</div>
-        <ul class="forwhom-list">
-          <li><span class="forwhom-icon--yes">&#10003;</span> Your flight departed from a UK or EU airport</li>
-          <li><span class="forwhom-icon--yes">&#10003;</span> Or arrived in UK/EU on a UK or EU airline</li>
-          <li><span class="forwhom-icon--yes">&#10003;</span> Arrived 3+ hours late, or was cancelled</li>
-          <li><span class="forwhom-icon--yes">&#10003;</span> Happened within the last 6 years</li>
-          <li><span class="forwhom-icon--yes">&#10003;</span> You&rsquo;re happy to send the letter yourself</li>
+    <div class="section-label">Know your fine</div>
+    <h2>Private fine vs council PCN &mdash; a crucial difference</h2>
+    <div class="type-grid">
+      <div class="type-card type-card--private">
+        <div class="type-title type-title--private">&#128994; Private Parking Charge</div>
+        <p style="font-size:0.86rem;color:var(--ink-3);margin-bottom:14px;line-height:1.6;">Issued by NCP, Euro Car Parks, ParkingEye, APCOA, Smart Parking, etc.</p>
+        <ul class="type-list">
+          <li><span style="color:var(--green);font-weight:700;">&#10003;</span> Not a true fine &mdash; it&rsquo;s an invoice</li>
+          <li><span style="color:var(--green);font-weight:700;">&#10003;</span> Cannot use bailiffs without a court order</li>
+          <li><span style="color:var(--green);font-weight:700;">&#10003;</span> Free appeal to POPLA or IAS</li>
+          <li><span style="color:var(--green);font-weight:700;">&#10003;</span> NtK timing rules often breached</li>
+          <li><span style="color:var(--green);font-weight:700;">&#10003;</span> Signage requirements frequently not met</li>
+          <li><span style="color:var(--green);font-weight:700;">&#10003;</span> Success rate significantly higher</li>
         </ul>
       </div>
-      <div class="forwhom-card forwhom-card--no">
-        <div class="forwhom-title forwhom-title--no">May not apply if...</div>
-        <ul class="forwhom-list">
-          <li><span class="forwhom-icon--no">&mdash;</span> Flight departed outside UK/EU on a non-UK/EU airline</li>
-          <li><span class="forwhom-icon--no">&mdash;</span> Arrived less than 3 hours late</li>
-          <li><span class="forwhom-icon--no">&mdash;</span> Delay was caused by extreme weather or air traffic control</li>
-          <li><span class="forwhom-icon--no">&mdash;</span> Flight was more than 6 years ago</li>
+      <div class="type-card type-card--council">
+        <div class="type-title type-title--council">&#128308; Council PCN</div>
+        <p style="font-size:0.86rem;color:var(--ink-3);margin-bottom:14px;line-height:1.6;">Issued by local authority (Westminster, Manchester, etc.) or TfL.</p>
+        <ul class="type-list">
+          <li><span style="color:var(--muted);">&mdash;</span> Official Penalty Charge Notice</li>
+          <li><span style="color:var(--muted);">&mdash;</span> Can escalate to bailiffs if ignored</li>
+          <li><span style="color:var(--muted);">&mdash;</span> Formal appeal to council, then adjudicator</li>
+          <li><span style="color:var(--green);font-weight:700;">&#10003;</span> 50% discount if appealed within 14 days</li>
+          <li><span style="color:var(--green);font-weight:700;">&#10003;</span> Grounds: error, mitigating circumstances, signage</li>
+          <li><span style="color:var(--green);font-weight:700;">&#10003;</span> Independent adjudicator free to use</li>
         </ul>
       </div>
     </div>
@@ -252,114 +222,108 @@
 </section>
 
 <!-- TRUST -->
-<section class="section section--alt">
+<section class="section">
   <div class="container">
-    <div class="section-label">How it works legally</div>
-    <h2>Your rights under UK and EU law</h2>
+    <div class="section-label">How we work</div>
+    <h2>Based on UK parking law</h2>
     <div class="trust-grid">
       <div class="trust-item">
         <div class="trust-item__label">Legal basis</div>
-        <div class="trust-item__text">UK261 Regulations 2019 (post-Brexit) and EU Regulation 261/2004 cover most delayed and cancelled flights. These rights apply to millions of passengers every year.</div>
+        <div class="trust-item__text">Our analysis is based on the Protection of Freedoms Act 2012 (POFA), BPA and IPC Codes of Practice for private operators, and the Traffic Management Act 2004 for council PCNs.</div>
       </div>
       <div class="trust-item">
         <div class="trust-item__label">What we check</div>
-        <div class="trust-item__text">Route distance, delay duration, disruption type, extraordinary circumstances defence, care and assistance rights, and the 6-year limitation period.</div>
+        <div class="trust-item__text">NtK timing and validity, signage compliance, procedural errors, keeper liability, contravention accuracy and the correct appeal route (POPLA, IAS or adjudicator).</div>
       </div>
       <div class="trust-item">
         <div class="trust-item__label">What we are not</div>
-        <div class="trust-item__text">We don&rsquo;t provide legal advice and don&rsquo;t represent you. For complex cases, we recommend the CAA, Aviation ADR or Citizens Advice.</div>
+        <div class="trust-item__text">We don&rsquo;t provide legal advice and don&rsquo;t represent you. For complex cases or court proceedings, we recommend Citizens Advice or a solicitor.</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PROOF NUMBERS -->
-<section class="section">
+<section class="section section--alt">
   <div class="container">
     <div class="section-label">The numbers</div>
-    <h2>Know what you could be owed</h2>
+    <h2>Why appealing is worth it</h2>
     <div class="proof-grid">
-      <div class="proof-item"><div class="proof-num">&pound;220</div><div class="proof-label">Short-haul flights up to 1,500 km (e.g. London&ndash;Edinburgh, London&ndash;Amsterdam)</div></div>
-      <div class="proof-item"><div class="proof-num">&pound;350</div><div class="proof-label">Medium-haul flights 1,500&ndash;3,500 km (e.g. London&ndash;Tenerife)</div></div>
-      <div class="proof-item"><div class="proof-num">&pound;520</div><div class="proof-label">Long-haul flights over 3,500 km (e.g. London&ndash;New York)</div></div>
-      <div class="proof-item"><div class="proof-num">6 years</div><div class="proof-label">How far back you can claim in England and Wales</div></div>
+      <div class="proof-item"><div class="proof-num">56%</div><div class="proof-label">Of POPLA appeals against private parking charges are upheld in favour of the driver</div></div>
+      <div class="proof-item"><div class="proof-num">14 days</div><div class="proof-label">The window for a private company to send a valid NtK &mdash; miss this and the fine may be unenforceable</div></div>
+      <div class="proof-item"><div class="proof-num">&pound;0</div><div class="proof-label">Cost to submit an appeal to POPLA or the independent adjudicator &mdash; completely free</div></div>
+      <div class="proof-item"><div class="proof-num">&pound;19</div><div class="proof-label">Cost of a ParkingFine.co.uk appeal letter &mdash; versus fines of £60&ndash;£160</div></div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section section--alt">
+<section class="section">
   <div class="container">
     <div class="section-label">Questions</div>
     <h2>Everything you need to know</h2>
     <div class="faq-list">
 
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">How much could I be owed?
+        <div class="faq-q" onclick="toggleFaq(this)">What&rsquo;s the difference between a private fine and a council PCN?
           <svg class="faq-chevron" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
-        <div class="faq-a">£220 for flights up to 1,500 km, £350 for 1,500&ndash;3,500 km, and £520 for flights over 3,500 km. These amounts apply per passenger &mdash; so a family of four could be owed over £2,000.</div>
+        <div class="faq-a">A council PCN is an official Penalty Charge Notice issued under the Traffic Management Act 2004 and can ultimately be enforced by bailiffs if ignored. A private parking charge is essentially an invoice from a private company &mdash; it cannot be enforced by bailiffs without first obtaining a County Court Judgment. Private fines are significantly easier to challenge.</div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Does this apply to my flight?
+        <div class="faq-q" onclick="toggleFaq(this)">What is a Notice to Keeper (NtK)?
           <svg class="faq-chevron" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
-        <div class="faq-a">UK261/EU261 covers flights departing from a UK or EU airport (any airline), and flights arriving in the UK or EU operated by a UK or EU airline. If your flight was delayed 3+ hours at arrival, or cancelled without 14 days&rsquo; notice, you may have a claim.</div>
+        <div class="faq-a">A Notice to Keeper is sent to the registered keeper of the vehicle (rather than the driver) when the driver wasn&rsquo;t identified at the time. For private companies, the NtK must arrive between 29 and 56 days after the alleged contravention. If it arrives outside this window, keeper liability under POFA 2012 may not be established &mdash; a strong appeal ground.</div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">What if the airline says &ldquo;extraordinary circumstances&rdquo;?
+        <div class="faq-q" onclick="toggleFaq(this)">What if I ignore a private fine?
           <svg class="faq-chevron" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
-        <div class="faq-a">Airlines often use this defence to avoid paying. But technical faults, staff shortages and most airline strikes do not qualify as extraordinary circumstances under case law. We check whether the airline&rsquo;s defence actually holds up.</div>
+        <div class="faq-a">Don&rsquo;t ignore it entirely. While private companies can&rsquo;t send bailiffs directly, they can take you to the County Court for a CCJ &mdash; which would affect your credit rating. The best approach is to appeal formally, not to ignore. We provide the appeal letter to do this properly.</div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">How far back can I claim?
+        <div class="faq-q" onclick="toggleFaq(this)">What is POPLA?
           <svg class="faq-chevron" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
-        <div class="faq-a">In England and Wales you have 6 years to claim. In Scotland it&rsquo;s 5 years. So you may be able to claim for flights that were delayed or cancelled years ago &mdash; as long as you have some documentation.</div>
+        <div class="faq-a">POPLA (Parking on Private Land Appeals) is a free, independent appeals service for private parking charges issued by BPA-member operators. If your appeal to the parking company fails, you can escalate to POPLA at no cost. Over 50% of POPLA appeals are decided in favour of the driver.</div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">What if the airline ignores my letter?
+        <div class="faq-q" onclick="toggleFaq(this)">What if my fine is from the council?
           <svg class="faq-chevron" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
-        <div class="faq-a">Your claim letter explains the next steps clearly. If the airline ignores or rejects your claim, you can escalate to the Civil Aviation Authority (CAA), an approved Alternative Dispute Resolution (ADR) scheme, or take the case to the Small Claims Court.</div>
+        <div class="faq-a">Council PCNs have a formal appeal process. You must make an informal representation within 14 or 28 days (the notice will say which). If rejected, you can make a formal appeal, then escalate to an independent adjudicator free of charge. Appealing within 14 days also gives you a new discount window if the appeal fails.</div>
       </div>
 
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Is this legal advice?
           <svg class="faq-chevron" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
-        <div class="faq-a">No. FlightClaim provides an informational check and a draft claim letter. We don&rsquo;t provide legal advice or represent you. For complex situations, we recommend Citizens Advice or a regulated solicitor.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">What happens to my document?
-          <svg class="faq-chevron" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
-        <div class="faq-a">Your document is permanently deleted after analysis. We do not store your personal data beyond what is needed to process your request.</div>
+        <div class="faq-a">No. ParkingFine.co.uk provides an informational analysis and draft appeal letter. We don&rsquo;t provide legal advice or represent you. For complex cases or court proceedings, consult Citizens Advice or a solicitor.</div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- FOOTER INFO -->
 <div style="max-width:860px;margin:0 auto 24px;padding:0 24px;font-size:0.88rem;color:var(--ink-3);line-height:1.75;">
-  <p><strong>FlightClaim</strong> is a UK-focused flight compensation document analysis service.</p>
-  <p>Need help? Email us at <a href="mailto:support@flightclaim.co.uk">support@flightclaim.co.uk</a>.</p>
+  <p><strong>ParkingFine.co.uk</strong> is a UK-focused parking fine appeal document analysis service.</p>
+  <p>Need help? Email us at <a href="mailto:support@parkingfine.co.uk">support@parkingfine.co.uk</a>.</p>
   <p>Uploaded documents are processed securely, used only for your analysis, and deleted after completion.</p>
 </div>
 
 <footer class="disclaimer">
   <div class="container">
-    <p>FlightClaim provides informational checks and draft claim letters based on UK261 Regulations 2019 and EU Regulation 261/2004. We do not provide legal advice. A claim letter does not guarantee payment. For complex situations, consult Citizens Advice or a solicitor. Documents deleted after processing. &copy; 2025 FlightClaim.</p>
+    <p>ParkingFine.co.uk provides informational analyses and draft appeal letters based on UK parking law including the Protection of Freedoms Act 2012, BPA and IPC Codes of Practice, and the Traffic Management Act 2004. We do not provide legal advice. An appeal letter does not guarantee cancellation. For complex cases, consult Citizens Advice or a solicitor. Documents deleted after processing. &copy; 2025 ParkingFine.co.uk</p>
   </div>
 </footer>
 
 <!-- STICKY FOOTER -->
 <div class="sticky-footer" id="sticky-footer">
   <div>
-    <div class="sticky-footer__text">Flight delayed or cancelled?</div>
-    <div class="sticky-footer__sub">You could be owed up to &pound;520 &middot; one-time &pound;29</div>
+    <div class="sticky-footer__text">About to pay a fine? Check first.</div>
+    <div class="sticky-footer__sub">Most people pay unnecessarily &middot; &pound;19 one-time</div>
   </div>
-  <button class="sticky-cta" onclick="openModal()">Check my flight &rarr;</button>
+  <button class="sticky-cta" onclick="openModal()">Check before I pay &mdash; &pound;19 &rarr;</button>
 </div>
 
 <!-- MODAL -->
@@ -367,18 +331,18 @@
   <div class="modal">
     <div class="modal__header">
       <div class="modal__eyebrow">What you get</div>
-      <div class="modal__title">Full check + ready-to-send claim letter within 24 hours</div>
-      <div class="modal__sub">Upload your document. We check your claim and send you a ready-to-send letter within 24 hours.</div>
-      <div class="modal__price">&pound;29 <span style="font-size:1rem;color:#9CA3AF;font-weight:400;">one-time &middot; no subscription</span></div>
+      <div class="modal__title">Full check + ready-to-send appeal letter within 24 hours</div>
+      <div class="modal__sub">Upload your fine. We check every appeal ground and send you a ready-to-send letter within 24 hours.</div>
+      <div class="modal__price">&pound;19 <span style="font-size:1rem;color:#9CA3AF;font-weight:400;">one-time &middot; no subscription</span></div>
     </div>
     <div class="modal__body">
-      <div class="modal__feature"><div class="check">&#10003;</div><div>Full compensation check based on UK/EU flight law</div></div>
-      <div class="modal__feature"><div class="check">&#10003;</div><div>Check for &ldquo;extraordinary circumstances&rdquo; defence</div></div>
-      <div class="modal__feature"><div class="check">&#10003;</div><div>Ready-to-send claim letter in your name</div></div>
-      <div class="modal__feature"><div class="check">&#10003;</div><div>Keep 100% of your compensation</div></div>
-      <div class="modal__disclaimer">&#8505;&#65039; This is an informational check, not legal advice.</div>
-      <p id="modal-dynamic-copy" style="margin-bottom:16px;color:#6b7a90;font-size:0.9rem;">We&rsquo;ve already found initial signs of a valid claim. Full check follows after payment.</p>
-      <a href="https://buy.stripe.com/YOUR_STRIPE_LINK_29" class="modal__cta">Check my flight now &mdash; &pound;29 &rarr;</a>
+      <div class="modal__feature"><div class="check">&#10003;</div><div>Private vs council identified &mdash; different strategy for each</div></div>
+      <div class="modal__feature"><div class="check">&#10003;</div><div>NtK timing, signage and procedural errors checked</div></div>
+      <div class="modal__feature"><div class="check">&#10003;</div><div>Ready-to-send appeal letter</div></div>
+      <div class="modal__feature"><div class="check">&#10003;</div><div>Next steps if rejected (POPLA, IAS or adjudicator &mdash; all free)</div></div>
+      <div class="modal__disclaimer">&#8505;&#65039; Informational analysis, not legal advice.</div>
+      <p id="modal-dynamic-copy" style="margin-bottom:16px;color:#6b7a90;font-size:0.9rem;">We&rsquo;ve identified potential appeal scenarios &mdash; full check after upload. Don&rsquo;t pay yet.</p>
+      <a href="https://buy.stripe.com/YOUR_STRIPE_LINK" class="modal__cta">Check my fine before I pay &mdash; &pound;19 &rarr;</a>
       <div class="modal__security">&#128274; Secure payment via Stripe</div>
       <div class="modal__close" onclick="closeModal()">Cancel</div>
     </div>
@@ -387,10 +351,9 @@
 
 <script src="app.js"></script>
 <script>
-const WORKER_URL = 'https://flightclaim.dickgroen2.workers.dev';
+const WORKER_URL = 'https://parkingfine.dickgroen2.workers.dev';
 let gratisFile = null;
 
-// Show free card after 4 seconds
 setTimeout(() => {
   const card = document.getElementById('free-card');
   if (card) { card.style.opacity = '0.85'; card.style.pointerEvents = 'auto'; }
@@ -427,7 +390,7 @@ async function startGratisUpload() {
   btn.disabled = true;
   btn.textContent = 'Sending...';
   status.className = 'optie-status optie-status--info';
-  status.textContent = 'Checking your flight...';
+  status.textContent = 'Checking your fine...';
   const formData = new FormData();
   formData.append('file', gratisFile);
   formData.append('name', name);
@@ -437,14 +400,14 @@ async function startGratisUpload() {
     const data = await res.json();
     if (data.ok) {
       status.className = 'optie-status optie-status--success';
-      status.textContent = 'Done! Your estimate will arrive by the next business day before 4pm.';
+      status.textContent = 'Done! Your assessment will arrive by the next business day before 4pm.';
       btn.textContent = 'Sent \u2713';
     } else { throw new Error(data.error || 'Error'); }
   } catch (err) {
     status.className = 'optie-status optie-status--error';
     status.textContent = 'Error: ' + err.message;
     btn.disabled = false;
-    btn.textContent = 'Get free estimate';
+    btn.textContent = 'Get free check';
   }
 }
 </script>
